@@ -1,0 +1,79 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+=============================================
+
+Typography
+
+=============================================
+*/
+body {
+  font-family: '<Montserrot', sans-serif;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  font-size: 2rem;
+  color: black;
+  letter-spacing: 2px;
+}
+
+
+.homepage {
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.header {
+  margin: 0 auto;
+  padding: 1em;
+  /* min-width: 400px; */
+  /* background: green; */
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  align-items: center;
+  margin: 0;
+}
+
+a:link {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a:hover {
+  border-bottom: black solid 1px;
+}
+
+@media (min-width: 650px) {
+  .header {
+    width: 550px;
+    margin: 0;
+    padding: 1em 0;
+  }
+
+  ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  li {
+    font-size: 1rem;
+    letter-spacing: 0.8px;
+    line-height: 1.5;
+  }
+  ul:last-child {
+    margin-right: 0;
+  }
+}
