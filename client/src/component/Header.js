@@ -10,7 +10,9 @@ function Header() {
           <Link to="/location"><li>Location</li></Link>
           <Link to="/contact"><li>Contact Us</li></Link>
         </ul>
-        <i className="fa-solid fa-cart-shopping"></i>
+        <Link to="/cart">
+          <i className="fa-solid fa-cart-shopping"></i>
+        </Link>
       </nav>
   )
 }

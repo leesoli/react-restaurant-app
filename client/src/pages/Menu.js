@@ -1,14 +1,18 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import MenuItems from '../component/Menu-items'
-import data from '../data.json'
+import {Context} from "../Context"
+
 
 export default function Menu () {
-  const menuItems = data.map((item, index) => (
-    <MenuItems item={item} key={index} />
+
+  const {menuItems} = useContext(Context)
+
+  const menu = menuItems.map(item => (
+    <MenuItems item={item} key={item.id}/>
   ))
   return (
-    <main className="menu-container ">
-      {menuItems}
+    <main className="menu-container">
+      {menu}
     </main>
   )
 }
