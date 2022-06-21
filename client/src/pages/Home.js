@@ -7,13 +7,13 @@ export default function Home () {
     backgroundImage: `url(${restaurantPhoto})`
   }
   return (
-    <div className="homepage" style={styles} >
+    <main className="homepage" style={styles} >
       {/* <img
         className="homepage-image"
         src={restaurantPhoto}
         alt="Original Tanakaya location 20 years ago"
       ></img> */}
 
-    </div>
+    </main>
   )
 }

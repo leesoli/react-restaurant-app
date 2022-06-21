@@ -5,6 +5,7 @@ import Home from '../pages/Home'
 import Menu from '../pages/Menu'
 import Location from '../pages/Location'
 import Contact from '../pages/Contact'
+import Footer from './Footer'
 
 export default function App() {
   return (
@@ -12,10 +13,11 @@ export default function App() {
       <Header />
       <Routes>
         <Route exact path="/" element={<Home />}/>
-        <Route path="/menu" element={<Menu />}/>
         <Route path="/location" element={<Location />}/>
+        <Route path="/menu" element={<Menu />}/>
         <Route path="/contact" element={<Contact />}/>
       </Routes>
+      {/* <Footer /> */}
     </div>
   )
 }
