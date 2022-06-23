@@ -16,7 +16,7 @@ export default function MenuItems ({item}) {
     >
       <h3 className="item-name">{item.name}</h3>
       <p className="item-description">{item.description}</p>
-      <h4 className="item-price">{item.price}</h4>
+      <h4 className="item-price">${item.price}</h4>
       <img className="item-image" src={imagePhoto}></img>
       {hovered && <i className="fa-solid fa-cart-plus"></i>}
     </div>

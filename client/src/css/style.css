@@ -78,6 +78,7 @@ h3, h4, button {
 
 .cart-item-price {
   font-weight: var(--fw-reg);
+  font-size: var(--fs-title);
 }
 
 .cart-item-btn {
@@ -87,6 +88,18 @@ h3, h4, button {
 a:link {
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.subtotal-title,
+.taxes-title,
+.total-title,
+.checkout-subtotal,
+.checkout-taxes {
+  font-weight: var(--fw-reg)
+}
+
+.right-align {
+  text-align: right;
 }
 
 /*
@@ -105,8 +118,7 @@ body {
 
 main {
   /* margin-top: 10em; */
-margin-top: 12em;
-margin-left: 2em;
+margin: 12em 2em 2em;
 }
 
 .homepage {
@@ -251,7 +263,7 @@ Menu-items
 }
 
 .item-price {
-  grid-row: 4/5
+  grid-row: 4/5;
 }
 
 .item-image {
@@ -277,10 +289,10 @@ Menu-items
 .cart-item {
   display: grid;
   grid-template-areas:
-  "image name price"
-  "image button .";
-  gap: 0 0.5em;
-  grid-template-columns: 1.5fr 1fr 1fr;
+  "image name price quantity total"
+  "image . . button .";
+  gap: 0 1em;
+  grid-template-columns: 1.5fr repeat(4, 1fr);
   grid-template-rows: auto auto;
   padding: 1.5em;
   background-color: #131e30;
@@ -297,6 +309,15 @@ Menu-items
   text-align: right;
 }
 
+.cart-item-quantity {
+  grid-area: quantity;
+}
+
+.cart-item-total {
+  grid-area: total;
+  text-align: right;
+}
+
 .cart-item-image {
   grid-area: image;
   max-width: 150px;
@@ -305,6 +326,33 @@ Menu-items
 .cart-item-btn {
   grid-area: button;
 }
+
+.checkout-summary {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+}
+
+.total-summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.25em;
+}
+
+.subtotal-title {
+  grid-column: 1/2;
+  grid-row: 1/2
+}
+
+.taxes-title {
+  grid-column: 1/2;
+  grid-row: 2/3
+}
+
+.total-title {
+  grid-column: 1/2;
+  grid-row: 3/4
+}
+
 
 .fa-cart-plus {
   color: var(--clr-light);
@@ -343,5 +391,8 @@ Menu-items
 
   .fa-cart-shopping {
     font-size: 1.5rem;
+  }
+  .cart-item {
+    max-width: 800px;
   }
 }
