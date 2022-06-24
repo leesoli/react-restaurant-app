@@ -7,7 +7,7 @@ function Header() {
         <ul className="menu-bar">
           <Link to="/"><li>Home</li></Link>
           <Link to="/menu"><li>Menu</li></Link>
-          <Link to="/location"><li>Location</li></Link>
+          <Link to="/story"><li>Our Story</li></Link>
           <Link to="/contact"><li>Contact Us</li></Link>
         </ul>
         <Link to="/cart">

@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Location () {
+export default function OurStory () {
   return (
     <main>
-      location
+      Our story
     </main>
   )
 }

@@ -7,7 +7,7 @@ function ContextProvider ({children}) {
   const [cartItems, setCartItems] = useState([])
   const [menuItems, setMenuItems] = useState([])
   const [total, setTotal] = useState(0)
-
+  const [form, setForm] = useState([])
 
   useEffect(() => {
     //get data from api
@@ -18,6 +18,12 @@ function ContextProvider ({children}) {
     //updates total when cart items are updated
     setTotal(findTotal())
   }, [cartItems])
+
+  function submitForm(e, formData) {
+    e.preventDefault()
+    console.log(formData)
+    setForm(prevState => ([...prevState, formData]))
+  }
 
   function updateCart(id, value) {
     setCartItems(prevState =>
@@ -51,7 +57,7 @@ function ContextProvider ({children}) {
 
 
   return (
-  <Context.Provider value={{cartItems, menuItems, total, addToCart, removeFromCart, updateCart, findTotal}}>
+  <Context.Provider value={{cartItems, menuItems, total, addToCart, removeFromCart, updateCart, findTotal, submitForm}}>
       {children}
     </Context.Provider>
   )

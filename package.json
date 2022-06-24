@@ -4,8 +4,8 @@
   "description": "A web app designed to display restaurant details and easily place orders online.",
   "main": "server/index.js",
   "scripts": {
-    "start": "nodemon server/index.js -w",
-    "build": "npx webpack -w",
+    "start": "nodemon -w",
+    "build": "webpack server/index.js -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
