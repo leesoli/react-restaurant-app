@@ -10,7 +10,7 @@ export default function Footer() {
             <br></br>
             Irvine, CA 92602
             <br></br>
-            (562) 123-4567
+            (123) 456-7890
           </p>
         </div>
 

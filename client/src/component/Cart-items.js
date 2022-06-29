@@ -25,7 +25,7 @@ export default function CartItems ({item}) {
         min={1}
       ></input>
       <h4 className="cart-item-total">{(item.price * quantity).toLocaleString("en-US", {style: "currency", currency: "USD"})}</h4>
-      <img className="cart-item-image" src={imagePhoto}></img>
+      <img className="cart-item-image" src={item.url}></img>
       <div
         onClick={() => removeFromCart(item.id, item)}
         className="cart-item-btn"

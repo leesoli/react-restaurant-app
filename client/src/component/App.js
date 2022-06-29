@@ -12,7 +12,7 @@ export default function App() {
   return (
     <div>
       <Header />
-      <Order />
+      <Contact />
       <Routes>
         <Route exact path="/" element={<Home />}/>
         <Route path="/story" element={<OurStory />}/>

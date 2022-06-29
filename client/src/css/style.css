@@ -97,14 +97,6 @@ h2, h3, h4, p, button {
   font-weight: var(--fw-small);
 }
 
-.item-name {
-  font-size: var(--fs-subtitle);
-}
-
-.item-price {
-  font-size: var(--fs-subtitle);
-}
-
 .cart-title,
 .cart-item-price {
   font-size: var(--fs-header)
@@ -112,7 +104,6 @@ h2, h3, h4, p, button {
 
 a:link {
   text-decoration: none;
-  text-transform: uppercase;
 }
 
 .subtotal-title,
@@ -135,6 +126,8 @@ textarea,
 .checkout-btn,
 .order-btn {
   font-family: var(--ff-primary);
+  font-size: var(--fs-large);
+  font-weight: var(--fw-small);
 }
 
 .submit-btn,
@@ -142,8 +135,6 @@ textarea,
 .order-btn {
   color: var(--clr-light);
   letter-spacing: 1.5px;
-  font-weight: var(--fw-small);
-  font-size: var(--fs-body)
 }
 
 a {
@@ -160,11 +151,26 @@ a {
 .item-description {
   font-weight: var(--fw-reg);
   text-align: center;
+  max-width: 26em;
 }
 
 .item-description,
 .item-price {
   font-size: var(--fs-large);
+}
+
+.contact-page {
+  line-height: 1.9;
+}
+
+.contact-page,
+.contact-info-title {
+  font-weight: var(--fw-reg);
+  font-size: var(--fs-large);
+}
+
+.contact-info-title {
+  font-size: var(--fs-header);
 }
 
 /*
@@ -182,7 +188,7 @@ body {
 }
 
 main {
-margin: 5em 3em 1em;
+  margin: 5em 3em 1em;
 }
 
 .nav {
@@ -199,6 +205,10 @@ margin: 5em 3em 1em;
 
 li {
   padding: 0.5em;
+}
+
+span {
+  display: block;
 }
 
 .logo-container {
@@ -365,30 +375,27 @@ Buttons and list items
 .order-btn,
 .submit-btn,
 .checkout-btn {
-  padding: 1em 3em;
+  padding: 1em;
   background-color: var(--clr-accent);
   border-radius: 3px;
   border: none
-}
-
-.submit-btn {
-  padding: 1em 0.5em;
 }
 
 .submit-btn, .checkout-btn {
   margin-top: 1.25em;
 }
 
-.submit-btn-container {
-  width: 380px;
-  display: flex;
-  flex-direction: column;
+.submit-btn {
+  width: 220px;
+  align-self: center;
 }
 
-.submit-btn {
-  /* max-width: 380px; */
-  width: 200px;
-  align-self: center;
+.submit-btn:hover,
+.submit-btn:focus,
+a:hover {
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 250ms;
 }
 
 .order-btn, li,
@@ -462,9 +469,6 @@ Order-items
   margin-bottom: 0.5em;
 }
 
-.item-description {
-  max-width: 24em;
-}
 
 /* Cart */
 
@@ -556,22 +560,64 @@ Order-items
   cursor: pointer;
 }
 
-form {
+/* Contact page */
+
+.contact-page {
+  margin: 7em 2em 1em;
   display: flex;
   flex-direction: column;
 }
 
-.contact-page {
-  max-width: 80%;
-  margin: 5em auto;
+.contact-hours {
+  text-align: right;
+}
+
+.contact-info {
+  max-width: 16em;
+}
+
+.contact-info-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.contact-info-title {
+  margin-bottom: 1em;
+}
+
+.contact-info span:nth-child(3),
+.contact-info span:nth-child(7),
+.contact-info span:last-child,
+.contact-add-info {
+  margin-bottom: 3em;
+}
+
+.contact-add-info {
+  max-width: 25em;
+}
+
+.contact-img {
+  height: 300px;
+  max-width: 70%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+label {
+  margin-bottom: 0.5em;
 }
 
 input,
 textarea {
-  padding: 0.5em;
-  margin-bottom: 1em;
-  max-width: 380px;
-  border-radius: 3px;
+  padding: 0.75em;
+  margin-bottom: 1.5em;
+  border-radius: 5px;
   border-style: none;
   border: #E5E5E5 1px solid;
   background-color: #FAFAFA;
@@ -579,11 +625,6 @@ textarea {
 
 textarea {
   min-height: 8em;
-}
-
-.contact-info {
-  margin-bottom: 3em;
-  max-width: 380px;
 }
 
 @media (min-width: 850px) {
@@ -665,7 +706,8 @@ textarea {
 
   .order-category {
     flex-direction: column;
-    margin: 0 5em 0 0;
+    margin: 0 6em 0 0;
+    min-width: 9em;
   }
 
   .category-items {
@@ -697,4 +739,33 @@ textarea {
     font-size: var(--fs-body);
   }
 
+
+}
+
+@media (min-width: 900px) {
+  .contact-page {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contact-info-container {
+    width: 40%;
+  }
+
+  .form-align {
+    margin-left: auto;
+    width: 85%;
+  }
+
+  .contact-additional {
+    width: 60%;
+  }
+
+  form {
+    max-width: 550px;
+  }
+
+  .item-description {
+    max-width: 22em;
+  }
 }
