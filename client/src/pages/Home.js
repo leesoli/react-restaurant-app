@@ -1,5 +1,4 @@
 import React from 'react'
-import restaurantPhoto from '../images/restaurant-photo.jpg'
 import {Link} from 'react-router-dom'
 
 export default function Home () {
