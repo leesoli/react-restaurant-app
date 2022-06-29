@@ -43,7 +43,7 @@ export default function Cart() {
         </div>
       </div>
 
-      <button>Checkout</button>
+      <button className="checkout-btn">Checkout</button>
     </main>
   )
 }

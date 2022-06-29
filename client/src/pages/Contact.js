@@ -26,14 +26,14 @@ export default function Contact () {
       <h2>Contact us</h2>
       <p className="contact-info">For store/business inquiries,
         <br></br>
-        contact <a href="/">tanakaya@gmail.com</a> or fill out the form with contact information.
+        email <a href="/">mazesoba@gmail.com</a> or submit your information below.
       </p>
       <form onSubmit={(e) => submitForm(e, form)}>
 
         <input
           id="firstName"
           required
-          placeholder="First Name"
+          placeholder="First Name *"
           type="text"
           onChange={handleChange}
           name="firstName"
@@ -43,7 +43,7 @@ export default function Contact () {
         <input
           id="lastName"
           required
-          placeholder="Last Name"
+          placeholder="Last Name *"
           type="text"
           onChange={handleChange}
           name="lastName"
@@ -53,7 +53,7 @@ export default function Contact () {
         <input
           id="email"
           required
-          placeholder="Email"
+          placeholder="Email *"
           type="email"
           onChange={handleChange}
           name="email"
@@ -72,14 +72,16 @@ export default function Contact () {
         <textarea
           id="message"
           required
-          placeholder="Message"
+          placeholder="Message *"
           type="textarea"
           onChange={handleChange}
           name="message"
           value={form.message}
         ></textarea>
 
+        <div className="submit-btn-container">
         <button className="submit-btn">Submit</button>
+        </div>
       </form>
     </main>
   )

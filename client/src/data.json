@@ -4,71 +4,71 @@
     "name": "Ten Zaru",
     "description": "Cold noodles with Shrimp tempura and various vegetables tempura",
     "price": 13.95,
-    "tags": ["New", "Bestseller"],
-    "url": ""
+    "category": "cold noodles",
+    "url": "../src/images/menu/ten-zaru.webp"
   },
   {
     "id": 2,
-    "name": "Ten Zaru",
-    "description": "Cold noodles with Shrimp tempura and various vegetables tempura",
-    "price": 13.95,
-    "tags": ["New", "Bestseller"],
-    "url": ""
+    "name": "Sansai",
+    "description": "Cold noodles with various vegetables and wild vegetables",
+    "price": 8.95,
+    "category": "cold noodles",
+    "url": "../src/images/menu//sansai.webp"
   },
   {
     "id": 3,
-    "name": "Ten Zaru",
-    "description": "Cold noodles with Shrimp tempura and various vegetables tempura",
+    "name": "Ume Shiso",
+    "description": "Cold noodles with various vegetables, Plum paste and Japanese Basil",
     "price": 13.95,
-    "tags": ["New", "Bestseller"],
-    "url": ""
+    "category": "cold noodles",
+    "url": "../src/images/menu/ume-shisho.webp"
   },
   {
     "id": 4,
-    "name": "Ten Zaru",
-    "description": "Cold noodles with Shrimp tempura and various vegetables tempura",
+    "name": "Kitsune",
+    "description": "Cold noodles with various vegetable and deep-fried tofu",
     "price": 13.95,
-    "tags": ["New", "Bestseller"],
-    "url": ""
+    "category": "cold noodles",
+    "url": "../src/images/menu/kitsune.webp"
   },
   {
     "id": 5,
-    "name": "Ten Zaru",
-    "description": "Cold noodles with Shrimp tempura and various vegetables tempura",
+    "name": "Niku Don",
+    "description": "Homemade teriyaki pork on rice",
     "price": 13.95,
-    "tags": ["New", "Bestseller"],
-    "url": ""
+    "category": "donburi",
+    "url": "../src/images/menu/niku-don.webp"
   },
   {
     "id": 6,
-    "name": "Ten Zaru",
-    "description": "Cold noodles with Shrimp tempura and various vegetables tempura",
+    "name": "Sauce Katsu Don",
+    "description": "Batter-coated and deep fried pork cutlet with a special sauce and served on rice with shred cabbage",
     "price": 13.95,
-    "tags": ["New", "Bestseller"],
-    "url": ""
+    "category": "donburi",
+    "url": "../src/images/menu/sauce-katsu.webp"
   },
   {
     "id": 7,
-    "name": "Ten Zaru",
-    "description": "Cold noodles with Shrimp tempura and various vegetables tempura",
+    "name": "Ebi Tenjyu",
+    "description": "Shrimp tempura with a special sauce and serves on rice",
     "price": 13.95,
-    "tags": ["New", "Bestseller"],
-    "url": ""
+    "category": "donburi",
+    "url": "../src/images/menu/ebi.webp"
   },
   {
     "id": 8,
-    "name": "Ten Zaru",
-    "description": "Cold noodles with Shrimp tempura and various vegetables tempura",
-    "price": 13.95,
-    "tags": ["New", "Bestseller"],
-    "url": ""
+    "name": "Avocado Sashimi",
+    "description": "Avocado with wasabi & soy sauce",
+    "price": 4.95,
+    "category": "appetizers",
+    "url": "../src/images/menu/avocado sashimi.webp"
   },
   {
     "id": 9,
-    "name": "Ten Zaru",
-    "description": "Cold noodles with Shrimp tempura and various vegetables tempura",
-    "price": 13.95,
-    "tags": ["New", "Bestseller"],
-    "url": ""
+    "name": "Itawasa",
+    "description": "Steamed fish paste",
+    "price": 4.95,
+    "category": "appetizers",
+    "url": "../src/images/menu/itawasa.webp"
   }
 ]

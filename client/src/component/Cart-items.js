@@ -1,5 +1,4 @@
 import React, {useContext, useState} from 'react'
-import imagePhoto from '../images/menu/ten-zaru.jpg'
 import {Context} from "../Context"
 
 export default function CartItems ({item}) {

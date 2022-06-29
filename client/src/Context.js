@@ -5,13 +5,13 @@ const Context = React.createContext()
 
 function ContextProvider ({children}) {
   const [cartItems, setCartItems] = useState([])
-  const [menuItems, setMenuItems] = useState([])
+  const [orderItems, setOrderItems] = useState([])
   const [total, setTotal] = useState(0)
   const [form, setForm] = useState([])
 
   useEffect(() => {
     //get data from api
-    setMenuItems(data)
+    setOrderItems(data)
   }, [])
 
   useEffect(() => {
@@ -57,7 +57,7 @@ function ContextProvider ({children}) {
 
 
   return (
-  <Context.Provider value={{cartItems, menuItems, total, addToCart, removeFromCart, updateCart, findTotal, submitForm}}>
+  <Context.Provider value={{cartItems, orderItems, total, addToCart, removeFromCart, updateCart, findTotal, submitForm}}>
       {children}
     </Context.Provider>
   )
