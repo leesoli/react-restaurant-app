@@ -12,7 +12,6 @@ export default function App() {
   return (
     <div>
       <Header />
-      <OurStory/>
       <Routes>
         <Route exact path="/" element={<Home />}/>
         <Route path="/story" element={<OurStory />}/>

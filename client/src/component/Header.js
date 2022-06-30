@@ -20,33 +20,31 @@ function Header() {
   }
 
   return (
-    <div>
-    <header>
-    <button className="nav-toggle" onClick={handleClick}>
-      <span className="hamburger"></span>
-    </button>
-    <div className="logo-container">
-      <GiFlowerEmblem
-        style={styles}
-      />
-      <div className="logo-name">Mazesoba</div>
-    </div>
-    </header>
+      <header>
+        <button className="nav-toggle" onClick={handleClick}>
+          <span className="hamburger"></span>
+        </button>
 
+        <nav className="large-screen-nav">
+        <ul className="large-screen-navlist">
+          <Link to="/"><li>Home</li></Link>
+          <Link to="/order"><li>Order</li></Link>
+          <Link to="/menu"><li>Menu</li></Link>
+          <Link to="/story"><li>Our Story</li></Link>
+          <Link to="/contact"><li>Contact Us</li></Link>
+        </ul>
+        </nav>
 
-      <nav className="nav">
-      <ul className="navlist">
-        <Link to="/"><li onClick={closeNav}>Home</li></Link>
-        <Link to="/order"><li onClick={closeNav}>Order</li></Link>
-        <Link to="/menu"><li onClick={closeNav}>Menu</li></Link>
-        <Link to="/story"><li onClick={closeNav}>Our Story</li></Link>
-        <Link to="/contact"><li onClick={closeNav}>Contact Us</li></Link>
-      </ul>
-      </nav>
-      <Link to="/cart">
+        <div className="logo-container">
+          <GiFlowerEmblem
+            style={styles}
+          />
+          <div className="logo-name">Mazesoba</div>
+        </div>
+        <Link to="/cart">
         <IconContext.Provider value={{
             color,
-            size: '1.75rem',
+            size: '2rem',
             className:"cart-icon"
           }}>
           <div>
@@ -54,7 +52,18 @@ function Header() {
           </div>
         </IconContext.Provider>
       </Link>
-      </div>
+      <nav className="nav">
+        <ul>
+          <Link to="/"><li onClick={closeNav}>Home</li></Link>
+          <Link to="/order"><li onClick={closeNav}>Order</li></Link>
+          <Link to="/menu"><li onClick={closeNav}>Menu</li></Link>
+          <Link to="/story"><li onClick={closeNav}>Our Story</li></Link>
+          <Link to="/contact"><li onClick={closeNav}>Contact Us</li></Link>
+        </ul>
+      </nav>
+      </header>
+
+
   )
 }
 
