@@ -14,7 +14,7 @@ export default function CartItems ({item}) {
   }
 
   function updateQuantity(id, value) {
-    const result = quantity + value;
+    const result = Number(quantity) + value;
     if (result > 0) {
       setQuantity(result);
       updateCart(id, result)

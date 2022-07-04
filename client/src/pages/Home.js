@@ -7,7 +7,7 @@ export default function Home () {
 
   return (
     <main className="homepage">
-       <section className="homepage-newletter">
+      <section className="homepage-newsletter">
         <p>We will be closed on <strong>July 3-4th</strong> in observance of <strong>Independence Day</strong>.</p>
       </section>
       <section className="homepage-intro">

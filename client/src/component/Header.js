@@ -1,14 +1,25 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React, {useContext, useState} from 'react';
+import {Link} from 'react-router-dom';
 import {IconContext} from "react-icons";
-import {RiShoppingCartLine} from "react-icons/ri";
+import {RiShoppingCartLine, RiShoppingCartFill} from "react-icons/ri";
 import {GiFlowerEmblem} from "react-icons/gi";
+import {Context} from '../Context';
 
 function Header() {
-  const color = '#001c40'
+  const {cartItems} = useContext(Context);
+
+  const color = '#040404';
   const styles = {
       border: `3px solid ${color}`,
       borderRadius: '50%'
+  }
+
+  window.addEventListener("resize", checkWindowSize)
+
+  function checkWindowSize() {
+    if (window.innerWidth >= 850) {
+      closeNav()
+    }
   }
 
   function handleClick() {
@@ -26,13 +37,13 @@ function Header() {
         </button>
 
         <nav className="large-screen-nav">
-        <ul className="large-screen-navlist">
-          <Link to="/"><li>Home</li></Link>
-          <Link to="/order"><li>Order</li></Link>
-          <Link to="/menu"><li>Menu</li></Link>
-          <Link to="/story"><li>Our Story</li></Link>
-          <Link to="/contact"><li>Contact Us</li></Link>
-        </ul>
+          <ul className="large-screen-navlist">
+            <Link to="/"><li>Home</li></Link>
+            <Link to="/order"><li>Order</li></Link>
+            <Link to="/menu"><li>Menu</li></Link>
+            <Link to="/story"><li>Our Story</li></Link>
+            <Link to="/contact"><li>Contact Us</li></Link>
+          </ul>
         </nav>
 
         <div className="logo-container">
@@ -44,16 +55,16 @@ function Header() {
         <Link to="/cart">
         <IconContext.Provider value={{
             color,
-            size: '2rem',
+            size: '1.75rem',
             className:"cart-icon"
           }}>
           <div>
-            <RiShoppingCartLine />
+            {cartItems.length > 0 ? <RiShoppingCartFill/>:<RiShoppingCartLine />}
           </div>
         </IconContext.Provider>
       </Link>
       <nav className="nav">
-        <ul>
+        <ul className="navlist">
           <Link to="/"><li onClick={closeNav}>Home</li></Link>
           <Link to="/order"><li onClick={closeNav}>Order</li></Link>
           <Link to="/menu"><li onClick={closeNav}>Menu</li></Link>
