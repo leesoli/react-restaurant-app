@@ -30,6 +30,12 @@ function Header() {
     document.body.classList.remove('nav-open');
   }
 
+  function setUnderline (listName) {
+    document.querySelector('.active').classList.remove('active')
+
+    document.querySelector(`.navlist__${listName}`).classList.add('active')
+  }
+
   return (
       <header>
         <button className="nav-toggle" onClick={handleClick}>
@@ -37,12 +43,36 @@ function Header() {
         </button>
 
         <nav className="large-screen-nav">
-          <ul className="large-screen-navlist">
-            <Link to="/"><li>Home</li></Link>
-            <Link to="/order"><li>Order</li></Link>
-            <Link to="/menu"><li>Menu</li></Link>
-            <Link to="/story"><li>Our Story</li></Link>
-            <Link to="/contact"><li>Contact Us</li></Link>
+          <ul
+           className="large-screen-navlist">
+            <li
+              className="navlist__home active"
+              onClick={() => setUnderline('home')}
+            >
+              <Link to="/">Home</Link></li>
+            <li
+              className="navlist__order"
+              onClick={() => setUnderline('order')}
+            >
+              <Link to="/order">Order</Link></li>
+            <li
+              className="navlist__menu"
+              onClick={() => setUnderline('menu')}
+            >
+              <Link to="/menu">Menu</Link>
+            </li>
+            <li
+              className="navlist__story"
+              onClick={() => setUnderline('story')}
+            >
+              <Link to="/story">Our Story</Link>
+            </li>
+            <li
+              className="navlist__contact"
+              onClick={() => setUnderline('contact')}
+            >
+              <Link to="/contact">Contact Us</Link>
+            </li>
           </ul>
         </nav>
 
@@ -59,17 +89,32 @@ function Header() {
             className:"cart-icon"
           }}>
           <div>
-            {cartItems.length > 0 ? <RiShoppingCartFill/>:<RiShoppingCartLine />}
+            {cartItems.length > 0 ? <RiShoppingCartFill style={{color: '#AE524B'}}/>:<RiShoppingCartLine />}
           </div>
         </IconContext.Provider>
       </Link>
       <nav className="nav">
         <ul className="navlist">
-          <Link to="/"><li onClick={closeNav}>Home</li></Link>
-          <Link to="/order"><li onClick={closeNav}>Order</li></Link>
-          <Link to="/menu"><li onClick={closeNav}>Menu</li></Link>
-          <Link to="/story"><li onClick={closeNav}>Our Story</li></Link>
-          <Link to="/contact"><li onClick={closeNav}>Contact Us</li></Link>
+          <li onClick={() => {
+            setUnderline('home')
+            closeNav()}}
+          ><Link to="/">Home</Link></li>
+          <li onClick={() => {
+            setUnderline('order')
+            closeNav()}}
+          ><Link to="/order">Order</Link></li>
+          <li onClick={() => {
+            setUnderline('menu')
+            closeNav()}}
+          ><Link to="/menu">Menu</Link></li>
+          <li onClick={() => {
+            setUnderline('story')
+            closeNav()}}
+          ><Link to="/story">Our Story</Link></li>
+          <li onClick={() => {
+            setUnderline('contact')
+            closeNav()}}
+          ><Link to="/contact">Contact Us</Link></li>
         </ul>
       </nav>
       </header>

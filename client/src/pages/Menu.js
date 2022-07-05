@@ -1,6 +1,7 @@
 import React, {useContext} from 'react'
 import {Context} from '../Context'
 import sobaPhoto from '../images/fidel-fernando-val59UQ3PqU-unsplash.jpg'
+import MenuItem from '../component/Menu-items'
 
 export default function Menu() {
   const {orderItems} = useContext(Context);
@@ -14,10 +15,7 @@ export default function Menu() {
   function renderMenuItem(category) {
     return orderItems.filter(item => item.category === category).map(item => {
       return (
-        <div className="menu-item-container" key={item.id}>
-          <span className="menu-item-name">{item.name}  ﹣  ${item.price}</span>
-          <span className="menu-item-description">{item.description}</span>
-        </div>
+        <MenuItem item={item}/>
       )
     })
   }

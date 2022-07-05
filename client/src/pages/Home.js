@@ -3,7 +3,12 @@ import { BsArrowRight } from 'react-icons/bs'
 import {Link} from 'react-router-dom'
 import chefPhoto from '../images/mitya-ivanov-Pq64mh1H2WA-unsplash.jpg'
 import sobaPhoto from '../images/charlesdeluvio-nAV0ojj-m4k-unsplash.jpg'
+import data from '../data.json'
+import MenuItem from '../component/Menu-items'
+
 export default function Home () {
+
+  const favMenu = [data[5], data[2], data[0]]
 
   return (
     <main className="homepage">
@@ -20,7 +25,10 @@ export default function Home () {
         </div>
       </section>
       <section className="mini-menu-container">
-        <h2>Some of Our Favorites</h2>
+        <h3>Some of Our Favorites</h3>
+        <div className="mini-menu-item-container">
+          {favMenu.map(item => <MenuItem item={item} />)}
+        </div>
         <Link to="/menu"><a className="menu-link">See Full Menu</a></Link>
       </section>
       <section className="homepage-recruiting">

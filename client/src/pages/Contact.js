@@ -44,7 +44,7 @@ export default function Contact () {
 
       <div className="contact-additional">
         <div className="form-align">
-          <p className="contact-add-info">For store/business inquiries,<br></br> email <a href="/">mazesoba@gmail.com</a> or submit your information below.
+          <p className="contact-add-info">For store/business inquiries,<br></br> email <a className="contact-email" href="/">mazesoba@gmail.com</a> or submit your information below.
           </p>
           <form onSubmit={(e) => submitForm(e, form)}>
             <label htmlFor="firstName">First Name *</label>

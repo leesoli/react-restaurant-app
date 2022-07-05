@@ -36,24 +36,42 @@ export default function Order () {
     }
   }
 
+  function setUnderline (category) {
+    document.querySelector('.active-filter').classList.remove('active-filter')
+
+    document.querySelector(`.category__${category}`).classList.add('active-filter')
+  }
+
   return (
     <main className="order-page">
       <div className="order-category">
         <span
-          className="category-items"
-          onClick={() => handleClick("all")}
+          className="category-items active-filter category__all"
+          onClick={() => {
+            handleClick("all")
+            setUnderline("all")
+          }}
         >All </span>
         <span
-          className="category-items"
-          onClick={() => handleClick("appetizers")}
+          className="category-items  category__appetizers"
+          onClick={() => {
+            handleClick("appetizers")
+            setUnderline("appetizers")
+          }}
           >Appetizers </span>
         <span
-          className="category-items"
-          onClick={() => handleClick("donburi")}
+          className="category-items  category__donburi"
+          onClick={() => {
+            handleClick("donburi")
+            setUnderline("donburi")
+          }}
         >Donburi</span>
         <span
-          className="category-items"
-          onClick={() => handleClick("cold noodles")}
+          className="category-items  category__cold-noodles"
+          onClick={() => {
+            handleClick("cold noodles")
+            setUnderline("cold-noodles")
+          }}
         >Cold Noodles</span>
       </div>
       <div className="order-container">

@@ -53,7 +53,6 @@ export default function CartItems ({item}) {
             className="cart-item-btn"
             size="1.75em"
         />
-
       </div>
     </div>
   )

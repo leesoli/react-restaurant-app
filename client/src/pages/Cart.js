@@ -5,10 +5,18 @@ import CheckoutItems from '../component/Checkout-items.js'
 
 export default function Cart() {
   const {cartItems, total} = useContext(Context)
+  const [clicked, setClicked] = useState(false)
 
   const cart = cartItems.map(item => (
     <CartItems item={item} key={item.id} />
   ))
+
+  function handleClick() {
+    setClicked(true);
+    setTimeout(() => {
+      setClicked(false);
+    }, 1000)
+  }
 
   return (
     <main className="cart-page">
@@ -24,7 +32,14 @@ export default function Cart() {
           <span className="checkout-subtotal">{total.toLocaleString("en-US", {style: "currency", currency: "USD"})}</span>
       </section>
 
-      <button className="checkout-btn">Checkout</button>
+      {clicked ?
+      <button
+        className="loading-checkout-btn"
+      >Loading...</button>:
+      <button
+        className="checkout-btn"
+        onClick={handleClick}
+      >Checkout</button>}
     </main>
   )
 }
