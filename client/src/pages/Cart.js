@@ -11,7 +11,7 @@ export default function Cart() {
 
   return (
     <main className="cart-page">
-      <section className="shopping-cart-container">
+      <section>
         <span className="cart-title">Shopping Cart</span>
         <div className="cart-container">
           {cart}
