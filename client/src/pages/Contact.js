@@ -1,9 +1,11 @@
 import React, {useState, useContext} from 'react'
 import noodles from '../images/noodles.jpg'
 import {Context} from '../Context'
+import useClicked from '../hooks/useClicked'
 
 export default function Contact () {
   const {submitForm} = useContext(Context)
+  const [clicked, ref] = useClicked()
 
   const [form, updateForm] = useState({
     firstName: '',
@@ -96,7 +98,13 @@ export default function Contact () {
               value={form.message}
             ></textarea>
 
-            <button className="submit-btn">Submit</button>
+            {clicked ?
+            <button className="loading-submit-btn">Submitting...</button>:
+            <button
+              className="submit-btn"
+              ref={ref}
+              >Submit</button>}
+
           </form>
         </div>
       </div>

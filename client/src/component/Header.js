@@ -4,6 +4,7 @@ import {IconContext} from "react-icons";
 import {RiShoppingCartLine, RiShoppingCartFill} from "react-icons/ri";
 import {GiFlowerEmblem} from "react-icons/gi";
 import {Context} from '../Context';
+import {setUnderline} from '../helper';
 
 function Header() {
   const {cartItems} = useContext(Context);
@@ -28,12 +29,6 @@ function Header() {
 
   function closeNav() {
     document.body.classList.remove('nav-open');
-  }
-
-  function setUnderline (listName) {
-    document.querySelector('.active').classList.remove('active')
-
-    document.querySelector(`.navlist__${listName}`).classList.add('active')
   }
 
   return (
@@ -88,7 +83,7 @@ function Header() {
             size: '1.75rem',
             className:"cart-icon"
           }}>
-          <div>
+          <div onClick={() => setUnderline('')}>
             {cartItems.length > 0 ? <RiShoppingCartFill style={{color: '#AE524B'}}/>:<RiShoppingCartLine />}
           </div>
         </IconContext.Provider>

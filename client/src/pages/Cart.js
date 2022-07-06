@@ -1,22 +1,16 @@
-import React, {useContext, useState} from 'react'
-import {Context} from '../Context'
-import CartItems from '../component/Cart-items'
-import CheckoutItems from '../component/Checkout-items.js'
+import React, {useContext} from 'react';
+import {Context} from '../Context';
+import CartItems from '../component/Cart-items';
+import CheckoutItems from '../component/Checkout-items.js';
+import useClicked from '../hooks/useClicked';
 
 export default function Cart() {
   const {cartItems, total} = useContext(Context)
-  const [clicked, setClicked] = useState(false)
+  const [clicked, ref] = useClicked()
 
   const cart = cartItems.map(item => (
     <CartItems item={item} key={item.id} />
   ))
-
-  function handleClick() {
-    setClicked(true);
-    setTimeout(() => {
-      setClicked(false);
-    }, 1000)
-  }
 
   return (
     <main className="cart-page">
@@ -38,7 +32,7 @@ export default function Cart() {
       >Loading...</button>:
       <button
         className="checkout-btn"
-        onClick={handleClick}
+        ref={ref}
       >Checkout</button>}
     </main>
   )

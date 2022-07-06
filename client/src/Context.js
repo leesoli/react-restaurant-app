@@ -21,7 +21,6 @@ function ContextProvider ({children}) {
 
   function submitForm(e, formData) {
     e.preventDefault()
-    console.log(formData)
     setForm(prevState => ([...prevState, formData]))
   }
 

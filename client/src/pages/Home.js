@@ -5,6 +5,7 @@ import chefPhoto from '../images/mitya-ivanov-Pq64mh1H2WA-unsplash.jpg'
 import sobaPhoto from '../images/charlesdeluvio-nAV0ojj-m4k-unsplash.jpg'
 import data from '../data.json'
 import MenuItem from '../component/Menu-items'
+import {setUnderline} from '../helper'
 
 export default function Home () {
 
@@ -29,13 +30,23 @@ export default function Home () {
         <div className="mini-menu-item-container">
           {favMenu.map(item => <MenuItem item={item} />)}
         </div>
-        <Link to="/menu"><a className="menu-link">See Full Menu</a></Link>
+        <Link
+          to="/menu"
+          onClick={() => setUnderline("menu")} >
+            <a className="menu-link">See Full Menu</a>
+        </Link>
       </section>
       <section className="homepage-recruiting">
         <span>Join our team -</span>
         <h2>{`We're currently accepting resumes for assistant cook and server positions. `}
         <br></br>
-          <Link to="/contact" className="recruiting-link">Reach out <BsArrowRight /></Link>
+          <Link
+            to="/contact"
+            className="recruiting-link"
+            onClick={() => setUnderline("contact")}
+          >
+              Reach out <BsArrowRight />
+          </Link>
         </h2>
       </section>
     </main>

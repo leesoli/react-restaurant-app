@@ -28,11 +28,19 @@ export default function Order () {
         )
       })
     } else {
-      return catItems.map(item => {
+      if (catItems.length >= 3) {
+        return catItems.map(item => {
+          return (
+            <OrderItems item={item} key={item.id} />
+          )
+        })
+      } else {
         return (
-          <OrderItems item={item} key={item.id} />
+          <div className="small-container">
+            {catItems.map(item => <OrderItems item={item} key={item.id} />)}
+          </div>
         )
-      })
+      }
     }
   }
 
