@@ -28,10 +28,6 @@ Typography
 =============================================
 */
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: var(--ff-primary);
   line-height: 1.7;
@@ -52,9 +48,16 @@ h1, h2, h3, h4, p, button {
   padding: 0;
 }
 
-/* .homepage-title {
-  text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
-} */
+a:link {
+  text-decoration: none;
+}
+
+.mini-menu-container a {
+  text-decoration: underline;
+  color: var(--clr-light);
+  font-weight: var(--fw-small);
+  font-size: var(--fs-title);
+}
 
 .logo-name {
   text-transform: uppercase;
@@ -99,10 +102,6 @@ h1, h2, h3, h4, p, button {
 
 .cart-title {
   font-size: var(--fs-menu);
-}
-
-a:link {
-  text-decoration: none;
 }
 
 input,
@@ -166,13 +165,6 @@ textarea,
 .homepage-recruiting h2 {
   font-weight: var(--fw-small);
   font-size: var(--fs-menu);
-}
-
-.menu-link {
-  text-decoration: underline;
-  color: var(--clr-light);
-  font-weight: var(--fw-small);
-  font-size: var(--fs-title);
 }
 
 .recruiting-link {
@@ -255,6 +247,10 @@ Layout
 =============================================
 */
 
+html {
+  scroll-behavior: smooth;
+}
+
 img {
   width: 100%;
 }
@@ -266,7 +262,7 @@ body {
 }
 
 main {
-  margin: 5em 3em 1em;
+  margin: 5em 3em 0;
 }
 
 .homepage {
@@ -438,13 +434,12 @@ header {
   top: 0.9em;
   z-index: 100;
   transform: scale(1);
-
 }
 
 .cart-icon:hover {
   cursor: pointer;
   transform: scale(1.1);
-  transition: transform 250ms ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
 .nav-open .hamburger {
@@ -460,7 +455,7 @@ header {
 }
 
 .hamburger:hover {
-  opacity: 0.6;
+  opacity: 0.4;
   transition: opacity 0.2s ease-in-out;
 }
 
@@ -506,14 +501,13 @@ ul {
 
 .footer {
   background-color: var(--clr-footer);
-  padding: 3em 2em 4em;
-  margin: 4em 0;
+  padding: 3em 2em 4em 3em;
+  margin: 4em 0 0;
 }
 
 .footer-container {
   display: flex;
   flex-wrap: wrap;
-  /* max-width: 1000px; */
 }
 
 .footer-title {
@@ -788,7 +782,7 @@ Order-items
 .cart-page {
   display: flex;
   flex-direction: column;
-  margin: 2em auto;
+  margin: 2em auto 0;
   width: 90%;
 }
 
@@ -1069,14 +1063,14 @@ textarea {
   .footer {
     display: flex;
     flex-direction: column;
-    padding: 4em 2em 2em;
+    padding: 4em 3em 2em;
   }
 
   .footer-container {
     align-self: center;
     flex-wrap: nowrap;
     justify-content: space-between;
-    min-width: 600px;
+    min-width: 800px;
   }
 
   .footer-address,
@@ -1277,6 +1271,7 @@ textarea {
   .cart-item-total {
     align-self: flex-start;
   }
+
 }
 
 @keyframes slidein-1 {

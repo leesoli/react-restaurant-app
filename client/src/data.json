@@ -27,7 +27,7 @@
     "id": 4,
     "name": "Kitsune",
     "description": "Cold noodles with various vegetable and deep-fried tofu",
-    "price": 13.95,
+    "price": 12.95,
     "category": "cold noodles",
     "url": "./client/src/images/menu/kitsune.webp"
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "name": "Ebi Tenjyu",
     "description": "Shrimp tempura with a special sauce and serves on rice",
-    "price": 13.95,
+    "price": 12.95,
     "category": "donburi",
     "url": "./client/src/images/menu/ebi.webp"
   },

@@ -8,18 +8,18 @@ export default function useClicked() {
     setClicked(true);
     setTimeout(() => {
       setClicked(false);
-    }, 1000)
+    }, 1000);
   }
 
   useEffect(() => {
     const myRef = ref.current;
-
     myRef.addEventListener("click", handleClick);
 
     return () => {
       myRef.removeEventListener("click", handleClick);
     }
-  }, [])
 
-  return [clicked, ref]
+  }, []);
+
+  return [clicked, ref];
 }

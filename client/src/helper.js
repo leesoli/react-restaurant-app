@@ -11,4 +11,4 @@ function setUnderline (listName) {
   }
 }
 
-export {setUnderline}
+export {setUnderline};

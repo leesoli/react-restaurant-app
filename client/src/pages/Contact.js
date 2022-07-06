@@ -1,26 +1,25 @@
-import React, {useState, useContext} from 'react'
-import noodles from '../images/noodles.jpg'
-import {Context} from '../Context'
-import useClicked from '../hooks/useClicked'
+import React, {useState, useContext} from "react";
+import {Context} from "../Context";
+import noodlePhoto from "../images/noodles.jpg";
+import useClicked from "../hooks/useClicked";
 
 export default function Contact () {
-  const {submitForm} = useContext(Context)
-  const [clicked, ref] = useClicked()
-
+  const {submitForm} = useContext(Context);
+  const [clicked, ref] = useClicked();
   const [form, updateForm] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    subject: '',
-    message: ''
-  })
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
 
   function handleChange(e) {
-    const {name, value} = e.target
+    const {name, value} = e.target;
     updateForm(prevState=> ({
       ...prevState,
       [name]: value
-    }))
+    }));
   }
 
   return (
@@ -41,13 +40,17 @@ export default function Contact () {
           <span>Jane Doe</span>
           <span>(123) 456-7890</span>
         </div>
-        <img className="contact-img" src={noodles}></img>
+
+        <img className="contact-img" src={noodlePhoto} alt="steamy udon noodles help by a pair of chopsticks"></img>
       </div>
 
       <div className="contact-additional">
         <div className="form-align">
-          <p className="contact-add-info">For store/business inquiries,<br></br> email <a className="contact-email" href="/">mazesoba@gmail.com</a> or submit your information below.
+          <p className="contact-add-info">For store/business inquiries,
+            <br></br>
+            email <a className="contact-email" href="/">mazesoba@gmail.com</a> or submit your information below.
           </p>
+
           <form onSubmit={(e) => submitForm(e, form)}>
             <label htmlFor="firstName">First Name *</label>
             <input
@@ -99,12 +102,13 @@ export default function Contact () {
             ></textarea>
 
             {clicked ?
-            <button className="loading-submit-btn">Submitting...</button>:
-            <button
-              className="submit-btn"
-              ref={ref}
-              >Submit</button>}
-
+              <button className="loading-submit-btn">Submitting...</button>:
+              <button
+                className="submit-btn"
+                ref={ref}
+                >Submit
+              </button>
+            }
           </form>
         </div>
       </div>

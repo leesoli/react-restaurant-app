@@ -1,13 +1,13 @@
-import React from 'react';
-import {Routes, Route} from 'react-router-dom'
-import Header from './Header'
-import Home from '../pages/Home'
-import Order from '../pages/Order'
-import OurStory from '../pages/OurStory'
-import Contact from '../pages/Contact'
-import Footer from './Footer'
-import Cart from '../pages/Cart'
-import Menu from '../pages/Menu'
+import React from "react";
+import {Routes, Route} from "react-router-dom";
+import Header from "./Header";
+import Home from "../pages/Home";
+import OurStory from "../pages/OurStory";
+import Order from "../pages/Order";
+import Contact from "../pages/Contact";
+import Menu from "../pages/Menu";
+import Cart from "../pages/Cart";
+import Footer from "./Footer";
 
 export default function App() {
   return (
