@@ -1,7 +1,7 @@
 import React from "react";
-import restaurantPhoto from "../images/restaurant.jpg";
-import chefPhoto from "../images/gabriel-forsberg-9sM53e9wTTY-unsplash.jpg";
-import restaurantExteriorPhoto from "../images/kris-sevinc-NVX55qVyEkE-unsplash.jpg";
+import restaurantPhoto from "../../../images/restaurant.jpg";
+import chefPhoto from "../../../images/gabriel-forsberg-9sM53e9wTTY-unsplash.jpg";
+import restaurantExteriorPhoto from "../../../images/kris-sevinc-NVX55qVyEkE-unsplash.jpg";
 
 export default function OurStory () {
   return (

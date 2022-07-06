@@ -1,6 +1,6 @@
 import React, {useState, useContext} from "react";
 import {Context} from "../Context";
-import noodlePhoto from "../images/noodles.jpg";
+import noodlePhoto from "../../../images/noodles.jpg";
 import useClicked from "../hooks/useClicked";
 
 export default function Contact () {

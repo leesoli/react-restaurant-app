@@ -5,7 +5,7 @@
     "description": "Cold noodles with Shrimp tempura and various vegetables tempura",
     "price": 13.95,
     "category": "cold noodles",
-    "url": "./client/src/images/menu/ten-zaru.webp"
+    "url": "menu/ten-zaru.jpg"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "description": "Cold noodles with various vegetables and wild vegetables",
     "price": 8.95,
     "category": "cold noodles",
-    "url": "./client/src/images/menu//sansai.webp"
+    "url": "menu/sansai.jpg"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "description": "Cold noodles with various vegetables, Plum paste and Japanese Basil",
     "price": 13.95,
     "category": "cold noodles",
-    "url": "./client/src/images/menu/ume-shisho.webp"
+    "url": "menu/ume-shiso.jpg"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "description": "Cold noodles with various vegetable and deep-fried tofu",
     "price": 12.95,
     "category": "cold noodles",
-    "url": "./client/src/images/menu/kitsune.webp"
+    "url": "menu/kitsune.jpg"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "description": "Homemade teriyaki pork on rice",
     "price": 13.95,
     "category": "donburi",
-    "url": "./client/src/images/menu/niku-don.webp"
+    "url": "menu/ten-zaru.jpg"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "description": "Batter-coated and deep fried pork cutlet with a special sauce and served on rice with shred cabbage",
     "price": 13.95,
     "category": "donburi",
-    "url": "./client/src/images/menu/sauce-katsu.webp"
+    "url": "menu/sauce-katsu.jpg"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "description": "Shrimp tempura with a special sauce and serves on rice",
     "price": 12.95,
     "category": "donburi",
-    "url": "./client/src/images/menu/ebi.webp"
+    "url": "menu/ebi.jpg"
   },
   {
     "id": 8,
@@ -61,7 +61,7 @@
     "description": "Avocado with wasabi & soy sauce",
     "price": 4.95,
     "category": "appetizers",
-    "url": "./client/src/images/menu/avocado sashimi.webp"
+    "url": "menu/avocado-sashimi.jpg"
   },
   {
     "id": 9,
@@ -69,6 +69,6 @@
     "description": "Steamed fish paste",
     "price": 4.95,
     "category": "appetizers",
-    "url": "./client/src/images/menu/itawasa.webp"
+    "url": "menu/itawasa.jpg"
   }
 ]

@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import {Context} from "../Context";
-import sobaPhoto from "../images/fidel-fernando-val59UQ3PqU-unsplash.jpg";
+import sobaPhoto from "../../../images/fidel-fernando-val59UQ3PqU-unsplash.jpg";
 import MenuItem from "../component/Menu-items";
 
 export default function Menu() {

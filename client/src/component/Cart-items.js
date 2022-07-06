@@ -23,7 +23,7 @@ export default function CartItems ({item}) {
 
   return (
     <div className="cart-item-container">
-      <img className="cart-item-image" src={item.url} alt={`image of ${item.name}`}></img>
+      <img className="cart-item-image" src={require('/images/' + item.url).default} alt={`image of ${item.name}`}></img>
 
       <div className="cart-item-info">
         <span className="cart-item-name">{item.name}</span>

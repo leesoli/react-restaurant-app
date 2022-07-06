@@ -1,8 +1,8 @@
 import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import {Link} from "react-router-dom";
-import chefPhoto from "../images/mitya-ivanov-Pq64mh1H2WA-unsplash.jpg";
-import sobaPhoto from "../images/charlesdeluvio-nAV0ojj-m4k-unsplash.jpg";
+import chefPhoto from "../../../images/mitya-ivanov-Pq64mh1H2WA-unsplash.jpg";
+import sobaPhoto from "../../../images/charlesdeluvio-nAV0ojj-m4k-unsplash.jpg";
 import data from "../data.json";
 import MenuItem from "../component/Menu-items";
 import {setUnderline} from "../helper";
@@ -28,7 +28,7 @@ export default function Home () {
       <section className="mini-menu-container">
         <h3>Some of Our Favorites</h3>
         <div className="mini-menu-item-container">
-          {favMenu.map(item => <MenuItem item={item} />)}
+          {favMenu.map(item => <MenuItem key={item.id} item={item} />)}
         </div>
         <Link
           to="/menu"

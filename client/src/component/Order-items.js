@@ -16,12 +16,13 @@ export default function OrderItems ({item}) {
     }
   }, [clicked]);
 
+
   return (
     <div className="order-item">
       <span className="item-name">{item.name}</span>
       <span className="item-description">{item.description}</span>
       <span className="item-price">${item.price}</span>
-      <img className="item-image" src={item.url} alt={`image of ${item.name}`}></img>
+      <img className="item-image" src={require('/images/' + item.url).default} alt={`image of ${item.name}`}></img>
 
       {clicked ?
         <button className="added-cart-btn"><i class="fa-solid fa-circle-check"></i> Added to cart</button>:
